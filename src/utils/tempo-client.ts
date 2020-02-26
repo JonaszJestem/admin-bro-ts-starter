@@ -3,9 +3,9 @@ import axios, { AxiosInstance } from 'axios';
 const DEVELOPMENT_TEAM = 6;
 
 class Tempo {
-  private client: AxiosInstance
+  private client: AxiosInstance;
 
-  private version;
+  private readonly version;
 
   constructor({ token, version = 3 }) {
     this.version = version;
