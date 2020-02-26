@@ -5,10 +5,10 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.tsx' --exec './node_modules/.bin/ts-node' src/server.ts",
-    "lint": "eslint './src/**/*.ts' './src/**/*.tsx'"
+    "lint": "eslint src --ext ts,tsx"
   },
   "dependencies": {
-    "@typegoose/typegoose": "^6.3.2",
+    "@typegoose/typegoose": "^6.4.0",
     "@types/axios": "^0.14.0",
     "@types/react-redux": "^7.1.7",
     "@types/redux": "^3.6.0",
@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
     "jira-connector": "^3.1.0",
-    "mongoose": "^5.9.1",
+    "mongoose": "^5.9.2",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.2"
