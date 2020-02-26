@@ -7,13 +7,14 @@ const port = 3000;
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-const run = async () => {
-  await mongoose.connect('mongodb://localhost:27017/workshop2', {
+const run = async (): Promise<void> => {
+  await mongoose.connect(`mongodb://${process.env.MONGO_URL}/workshop2`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
   await setupAdmin(app);
 
+  // eslint-disable-next-line no-console
   app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 };
 
